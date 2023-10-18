@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- CSS file -->
+  <style>
+    /* Center the content horizontally and vertically */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+ 
+</head>
+
+
+<body>
+<title>Worldwide Mortality</title>
+<h1>Unveiling Mortality: A Comprehensive Exploration of Causes of Death</h1>
+<div id="test2"></div><br>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">This graph shows the mortality rate for specific causes. There are many possible reasons for a person<br>
+   to perish and unfortunately among that causes is self-harm.</p>
+<div id="test"></div><br>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Looking deeper in this visualisation, it could be deduced that the every country in this dataset has a person <br>
+die due to self-harm. The number is especially big in China and India.</p>
+<div id="test3"></div><br>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Based on this chart, we realised that not although India and China has the most casualties due to self-harm, <br>
+the United States and Russia are coming in close as well.</p>
+<div id="test4"></div>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">It also shows how China has been improving over the years while India is steadily increasing over the years.</p>
+
+
+<script type="text/javascript">
+
+  var spec2 = "js/test.json";
+  vegaEmbed('#test', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "js/test2.json";
+  vegaEmbed('#test2', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "js/test3.json";
+  vegaEmbed('#test3', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "js/test4.json";
+  vegaEmbed('#test4', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>

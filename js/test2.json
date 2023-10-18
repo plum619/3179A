@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 350,
+    "title":"Causes of Death over the years",
+    "data": {"url": "https://raw.githubusercontent.com/plum619/3179/main/cause_of_deaths.csv"},
+    "repeat": {
+        "layer": ["Drowning", "HIV/AIDS", "Self-harm", "Road Injuries", "Exposure to Forces of Nature", "Malaria", "Environmental Heat and Cold Exposure"]
+      },
+      "spec": {
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "temporal"
+          },
+          "y": {
+            "aggregate": "sum",
+            "field": {"repeat": "layer"},
+            "type": "quantitative",
+            "title": "Number of deaths"
+          },
+          "color": {
+            "datum": {"repeat": "layer"},
+            "type": "nominal"
+          }
+        }
+      }
+  }
+  

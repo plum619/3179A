@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":"Death by Self-harm by country",
+    "data": {"url": "https://raw.githubusercontent.com/plum619/3179/main/cause_of_deaths.csv"},
+   
+        "mark": "arc",
+        "encoding": {
+            "theta": {"field": "Self-harm", "type": "quantitative", "aggregate": "mean"},
+            "color": {"field": "Country/Territory", "type": "nominal"},
+            "tooltip":[
+                {"field":"Country/Territory", "type": "nominal"},
+                {"field":"Self-harm", "type": "quantitative", "aggregate":"mean"}
+            ]
+    }
+  }     
